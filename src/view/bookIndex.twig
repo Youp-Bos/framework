@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hallo bezoekers!</h1>
+<table border="2px solid black">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+    </tr>
+    <tr>
+        {% for i in data %}
+            <td> {{ i.title }} </td>
+            <td> {{ i.author }}</td>
+            <td>{{ i.publisher }}</td>
+        {% endfor %}
+    </tr>
+</table>
+<a href="/">HOME</a>
+</body>
+</html>

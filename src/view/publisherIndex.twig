@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Publisher</h1>
+<a href="/publisher/add">ADD NEW</a>
+{% for i in data %}
+    <li> {{ i.naam }} </li>
+{% endfor %}
+</body>
+</html>

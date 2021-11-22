@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ src/index.php?path=$1 [NC,QSA,L]
+RewriteRule ^([a-z]*)$ src/index.php [NC,L,QSA]

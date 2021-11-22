@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Books</h1>
+<a href="/publisher/index">Publisher</a>
+<p></p>
+<a href="/user/login">Login</a>
+<p></p>
+<a href="/todo/index">TODO</a>
+{% for i in data %}
+    <li> {{ i.title }} </li>
+{% endfor %}
+</body>
+</html>

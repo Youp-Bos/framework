@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <link rel="stylesheet" href="/src/css/todo.css">
+</head>
+<body>
+<div class="mastercontainer">
+    <h1>Todo's!</h1>
+    <form method="post" class="createTodo">
+        <input type="text" name="titleToDo" placeholder="Title" contenteditable>
+        <input type="text" name="innerTextToDo" placeholder="InnerText" contenteditable>
+        <input type="submit" value="ADD">
+    </form>
+
+    {% for i in data %}
+        <form class="todoContainer" method="post">
+            <h1> {{ i.title }} </h1>
+            <h3>{{ i.innertext }}</h3>
+            <input type="hidden" name="id" value="{{ i.id }}">
+            <input type="submit" value="Edit" name="change">
+            <input type="submit" value="&#8593;" name="up">
+            <input type="submit" value="&#8595;" name="down">
+        </form>
+    {% endfor %}
+</div>
+</body>
+</html>
